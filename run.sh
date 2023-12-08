@@ -1,1 +1,1 @@
-go run server.go
+nodemon -e go,html --exec go run server.go --signal SIGTERM

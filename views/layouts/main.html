@@ -1,12 +1,26 @@
+<!--File: views/layouts/main.html-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Main</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
+    <script src="https://unpkg.com/htmx.org@latest"></script>
+    <title>HTMX App</title>
 </head>
 
-<body>
-    {{embed}}
+<body class="bg-gray-200">
+    <div class="flex h-screen">
+        <!-- Side Navigation -->
+        {{template "partials/sidenav" .}}
+        <!-- Main Content Area -->
+        <div class="w-full bg-white p-4" id="main">
+            <h2>{{.paulsTest}}</h2>
+            {{embed}}
+        </div>
+
 </body>
 
 </html>
